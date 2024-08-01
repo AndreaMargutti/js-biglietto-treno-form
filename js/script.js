@@ -18,7 +18,6 @@ const button = document.getElementById('give-btn');
 //Recupero i valori degli input
 button.addEventListener('click', function(e){
     e.preventDefault();
-
     
     //Recupero Nome e Cognome Utente
     const nameValue = nameField.value;
@@ -60,7 +59,6 @@ button.addEventListener('click', function(e){
         priceP.innerHTML += ` <strong>${finalPrice}</strong>`
     }
 })
-
 
 // # Fase di output
 
