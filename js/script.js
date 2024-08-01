@@ -36,11 +36,12 @@ button.addEventListener('click', function(e){
         const basePrice = kmsValue * 0.21;
         console.log('base-price: ',basePrice);
         let finalPrice = basePrice;
+        console.log('final-price: ', finalPrice);
     
         //Creo gli sconti:
         let discount = false;
         if(ageValue < 18) discount = parseInt(20);
-        else if(ageValue >= 65) discount = paresInt(40);
+        else if(ageValue >= 65) discount = parseInt(40);
         console.log('discount: ', discount);
     
         //Calcolo prezzo scontato
