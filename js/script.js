@@ -13,6 +13,7 @@ const nameField = document.getElementById('fullname');
 const kmsField = document.getElementById('kms');
 const ageField = document.getElementById('age');
 const button = document.getElementById('give-btn');
+let wagon = document.getElementById('wagon-num');
 
 // # Fase di elaborazione dati
 //Recupero i valori degli input
@@ -57,9 +58,16 @@ button.addEventListener('click', function(e){
     
         //Stampo i valori
         nameP.innerHTML += ` <strong>${nameValue}</strong>`;
-        priceP.innerHTML += ` <strong>${finalPrice}</strong>`
+        priceP.innerHTML += ` <strong>${finalPrice.toFixed(2)}€</strong>`
+
+        // ! Numero Carrozza
+        //Genere un numero casuale
+        const wagonValue = Math.floor(Math.random() * 10);
+        console.log(wagonValue);
+        //Inseriscilo nella cella corrispondente
+        if (wagonValue > 0) {
+            wagon.innerText = wagonValue; 
+        }
     }
 })
-
-// # Fase di output
 
