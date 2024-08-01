@@ -9,16 +9,19 @@
 
 // # Fase di preparazione
 // Recupero gli elementi HTML
-const nameField = document.getElementById('name');
+const nameField = document.getElementById('fullname');
 const kmsField = document.getElementById('kms');
 const ageField = document.getElementById('age');
-const button = document.getElementById('give-btn')
+const button = document.getElementById('give-btn');
 
 // # Fase di elaborazione dati
 //Recupero i valori degli input
 button.addEventListener('click', function(e){
     e.preventDefault();
 
+    //Recupero Nome e Cognome Utente
+    const nameValue = nameField.value;
+    console.log('name: ', nameValue);
     //Recupero i valori
     const kmsValue = parseInt(kmsField.value);
     console.log('kms: ', kmsValue);
@@ -38,7 +41,10 @@ button.addEventListener('click', function(e){
 
     //Calcolo prezzo scontato
     if(discount){
-        finalPrice -= finalPrice * discount / 100
-        console.log(finalPrice);
+        finalPrice -= finalPrice * discount / 100;
+        console.log('final-price: ', finalPrice);
     }
 })
+
+// # Fase di output
+
