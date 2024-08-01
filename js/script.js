@@ -34,7 +34,7 @@ button.addEventListener('click', function(e){
     let finalPrice = basePrice;
 
     //Creo gli sconti:
-    let discount = null;
+    let discount = false;
     if(ageValue < 18) discount = parseInt(20);
     else if(ageValue >= 65) discount = paresInt(40);
     console.log('discount: ', discount);
@@ -44,6 +44,15 @@ button.addEventListener('click', function(e){
         finalPrice -= finalPrice * discount / 100;
         console.log('final-price: ', finalPrice);
     }
+
+    // # Stampiano in pagina
+    //Recupero elementi
+    let nameP = document.getElementById('ticket-name');
+    let priceP = document.getElementById('ticket-price');
+
+    //Stampo i valori
+    nameP.innerHTML += ` <strong>${nameValue}</strong>`;
+    priceP.innerHTML += ` <strong>${finalPrice}</strong>`
 })
 
 // # Fase di output
