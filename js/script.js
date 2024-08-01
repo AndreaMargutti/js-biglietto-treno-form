@@ -14,6 +14,7 @@ const kmsField = document.getElementById('kms');
 const ageField = document.getElementById('age');
 const button = document.getElementById('give-btn');
 let wagon = document.getElementById('wagon-num');
+let cpCode = document.getElementById('cp-code');
 
 // # Fase di elaborazione dati
 //Recupero i valori degli input
@@ -68,6 +69,11 @@ button.addEventListener('click', function(e){
         if (wagonValue > 0) {
             wagon.innerText = wagonValue; 
         }
+
+        // ! Codice CP
+        const cpValue = Math.floor(Math.random() * 10000);
+        //Inseriscilo nella cella corrispondente
+        cpCode.innerText = cpValue;
     }
 })
 
