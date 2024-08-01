@@ -20,8 +20,6 @@ button.addEventListener('click', function(e){
     e.preventDefault();
 
     //Recupero i valori
-    const nameValue = nameField.value;
-    console.log(nameValue);
     const kmsValue = parseInt(kmsField.value);
     console.log('kms: ', kmsValue);
     const ageValue = parseInt(ageField.value);
