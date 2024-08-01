@@ -22,7 +22,7 @@ button.addEventListener('click', function(e){
     e.preventDefault();
     
     //Recupero Nome e Cognome Utente
-    const nameValue = nameField.value;
+    const nameValue = nameField.value.trim();
     console.log('name: ', nameValue);
     //Recupero i valori
     const kmsValue = parseInt(kmsField.value);
@@ -51,15 +51,21 @@ button.addEventListener('click', function(e){
             finalPrice -= finalPrice * discount / 100;
             console.log('final-price: ', finalPrice);
         }
-    
+
         // # Stampiano in pagina
         //Recupero elementi
         let nameP = document.getElementById('ticket-name');
         let priceP = document.getElementById('ticket-price');
-    
+        
+        //Reset del form
+        nameField.value = '';
+        kmsField.value = '';
+
         //Stampo i valori
         nameP.innerHTML += ` <strong>${nameValue}</strong>`;
         priceP.innerHTML += ` <strong>${finalPrice.toFixed(2)}€</strong>`
+
+        
 
         // ! Numero Carrozza
         //Genere un numero casuale

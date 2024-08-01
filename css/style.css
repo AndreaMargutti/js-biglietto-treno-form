@@ -25,9 +25,9 @@
     min-height: 100px;
 }
 
-.bd {
+/* .bd {
     border: 3px solid black;
-}
+} */
 
 .text-purple {
    color: var(--first-color);
